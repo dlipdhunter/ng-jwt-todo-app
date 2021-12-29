@@ -1,0 +1,11 @@
+<form [formGroup]="addForm" (ngSubmit)="onAdd()" >
+    <div class="flex justify-between mb-2 shadow-sm">
+        <input type="text" 
+        formControlName="todoText" 
+        placeholder="Enter todo..." 
+        class="w-full py-3 px-1 border-b outline-none">
+        <button type="submit" class="text-green-600 {{ todoText?.value?.length >= 1 ? '': 'hidden'}}">
+            <fa-icon [icon]="faPlus"></fa-icon>
+        </button>
+    </div>
+</form>

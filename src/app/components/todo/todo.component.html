@@ -1,0 +1,14 @@
+<div class="border-gray-400 flex flex-row mb-2" (click)="toggleIsComplete()">
+    <div class="select-none cursor-pointer rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg {{todo.isComplete ? 'bg-gray-300': 'bg-gray-100'}}">
+        <div class="flex flex-col rounded-md w-10 h-10 bg-gray-300 justify-center items-center mr-4">💧</div>
+        <div class="flex-1 pl-1 mr-16">
+          <div class="font-medium">{{todo.text}}</div>
+          <div class="text-gray-600 text-sm">{{todo.isComplete ? "Completed." : "Not completed."}}</div>
+        </div>
+        <div class="">
+            <button type="button" (click)="emitDeleteClick()" class="text-red-500 px-3 py-2">
+                <fa-icon [icon]="faTrash"></fa-icon>
+            </button>
+        </div>
+    </div>
+</div>
